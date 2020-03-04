@@ -1,0 +1,140 @@
+doctype html
+html
+  head
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='https://code.jquery.com/jquery-2.2.4.min.js')
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+
+    //-inilialize gg map
+    script(src= "https://storage.googleapis.com/map_population/MaxMinPopulation.js" )
+    script(src='/javascripts/gmap_polygon.js' )
+    script(src='/javascripts/gmap_init.js')
+
+    //-navbar
+    script(src='/javascripts/navbar.js')
+    link(rel="stylesheet", href="/stylesheets/navbar.css")
+
+    //-gg font for the title
+    link(href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet")
+
+    //-search function
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    link(rel='stylesheet' href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js')
+
+    //-side menu
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel='stylesheet' href='/stylesheets/side_menu.css')
+    script(src='/javascripts/sideMenu.js')
+
+    //-control dropdown menu
+    link(rel='stylesheet' href='/stylesheets/dropdown_menu_control.css')
+    script(src="/javascripts/dropdown_menu_control.js")
+    //-load control api
+    script(src="https://rack.pub/control.min.js")
+
+    //-home page css
+    link(rel="stylesheet", href="/stylesheets/home_page.css")
+    link(rel="stylesheet", href="/stylesheets/nicebox.css")
+    //- about page css
+    link(rel="stylesheet", href="/stylesheets/about_page.css")
+
+    //- slider
+    link(rel="stylesheet", href="/stylesheets/slider.css")
+
+ 
+  body
+    block header
+      //- title
+      div.head_title
+        div.head_title_inner
+          h1(id="title_name"  style="text-align: center")
+            a(href="/catalog") Visualizing Data with Google Maps Javascript API
+      //- nav bar
+      nav.menu
+        ul.menu__list
+          li.menu__group
+            a.menu__link(href='/catalog') Home
+          li.menu__group
+            a.menu__link(href='/catalog/map') Map
+          li.menu__group
+            a.menu__link(href='/catalog/about') About us
+    block content
+    
+   
+    block footer
+      div.footer_container
+        div.footer
+          .footer_content
+            div.footer_section.about
+              h2 Interactive Map with Vietnamese population data
+              p Where data is not just a number
+
+            div.footer_section.links
+              h2 Links
+              ul
+                a(href="/catalog")
+                  li.link Home
+                a(href="/catalog/map")
+                  li.link Map
+                a(href="/catalog/about")  
+                  li.link About
+            div.footer_section.contacts
+              h2 Contact us
+              .contacts_container
+                .contacts_inner
+                  //- phone
+                  .contacts_phone_wrapper
+                    .contacts_phone_icon
+                      a(href="")
+                        img(src="../images/PinClipart.com_prescription-clipart_3507301.png")
+                    .contacts_phone_info
+                        .phone_info 0123-456-789
+                  //- gmail
+                  .contacts_gmail_wrapper
+                    .contacts_gmail_icon
+                      a(href="#")
+                        img(src="../images/mail-512.png")
+                    .contacts_gmail_info
+                      .gmail_info link to gmail
+                  //- 
+                  .contacts_location_wrapper  
+                    .contacts_location_icon
+                      a(href="")
+                        img(src="../images/white-location-icon-png.png")
+                    .contacts_location_info
+                      .location_info location to contact
+                  //- github 
+                
+                    //- .contacts_github_info
+                    //-   .github_info link to github
+                  //- facebook
+                  //- .contacts_facebook_wrapper
+                    
+                  //-   .contacts_facebook_info
+                  //-     .facebook_info link to facebook
+          .footer_copyright_section
+            .footer_copyright_wrapper
+              .footer_copyright &#169; Copyright
+            .footer_contacts_icon
+              .contacts_social_wrapper
+                  .contacts_github_icon
+                    a(href="https://github.com/NotJackieTruong/finalProject2020")
+                      img(src="../images/GitHub-Mark-Light-120px-plus.png") 
+                  .contacts_facebook_icon
+                    a(href="https://www.facebook.com/JackieTruong123")
+                      img(src="../images/facebook-icon.png")
+                  //- .contacts_facebook_icon
+                  //-   a(href="#")
+                  //-     img(src="../images/facebook-icon.png")
+            
+        //- .footer_bottom
+        //-   &copy; @Copyright
+
+         //-khanh gg map api: AIzaSyAECzjHT9kMSFcH8AIMQdDtPsXzkWuZmCQ
+    //- script(type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAECzjHT9kMSFcH8AIMQdDtPsXzkWuZmCQ')
+    //-ngoc gg map api 
+    script(type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAECzjHT9kMSFcH8AIMQdDtPsXzkWuZmCQ&libraries=visualization,geometry&callback=initMap&language=vi')

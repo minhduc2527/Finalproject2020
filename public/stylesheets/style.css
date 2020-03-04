@@ -1,0 +1,228 @@
+/* general css */
+html, body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: white;
+  font: 400 22px/32px Google Sans, Noto Sans, Noto SansJP, Noto Sans KR, Noto Naskh Arabic, Noto Sans Thai, Noto Sans hebrew, Noto Sans Bengail, sans-serif;
+  letter-spacing: 0;
+  padding: 0;
+  margin: 0;
+  /* overflow-y: scroll; */
+}
+
+code, pre, .pre-style{
+  background: #f1f3f4;
+  color: #37474f;
+  font: 400 100%/1 Roboto Mono,monospace;
+  padding: 1px 4px;
+}
+
+.strong{
+  font-weight: bold;
+}
+
+em{
+  font-style: italic;
+}
+
+/* title css */
+.head_title{
+  align-items: center;
+  height: 4.4%;
+  padding: 0;
+  margin: 0 0 6px 0;
+}
+
+#title_name{
+  vertical-align: middle;
+  font: 400 22px/32px Google Sans, Noto Sans, Noto SansJP, Noto Sans KR, Noto Naskh Arabic, Noto Sans Thai, Noto Sans hebrew, Noto Sans Bengail, sans-serif;
+  letter-spacing: 0;
+  /* max-height: 32px; */
+  overflow: hidden;
+  white-space: nowrap;
+  transition: color .2s;
+  cursor: pointer;
+}
+
+#title_name a{
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.65);
+}
+#title_name a:hover{
+  color: black;
+}
+/* footer */
+.footer_container{
+  width: 100%;
+  height: auto;
+}
+.footer{
+  background: #0F9D58;
+  color: white;
+  width: 100%;
+  height: 100%;
+
+}
+.footer .footer_content{
+  height: 18%;
+  display: flex;
+  margin: 0 18%;
+}
+
+.footer .footer_content .footer_section{
+  font: 500 14px/20px Google Sans, Noto Sans, Noto Sans JP, Noto Sans KR , Noto Naskh Arabic, Noto Sans Thai, Noto Sans Hebrew, Noto Sans Bengali, sans-serif;
+  font-weight: 500;
+  width: 360px;
+  padding: 1.5%;
+}
+
+.footer .footer_content h2{
+  font: 500 14px/16px Google Sans, Noto Sans, Noto Sans JP, Noto Sans KR , Noto Naskh Arabic, Noto Sans Thai, Noto Sans Hebrew, Noto Sans Bengali, sans-serif;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+}
+
+.footer .footer_content .footer_section.about{
+  flex-grow: 1;
+}
+
+
+.footer .footer_content .footer_section ul{
+  margin-top: 12px;
+}
+
+.footer .footer_content .footer_section ul a{
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.footer .footer_content .footer_section li.link{
+  color: white;
+  font-weight: 500;
+  transition: all .5s;
+  
+}
+
+.footer .footer_content .footer_section li.link:hover{
+  text-decoration: none;
+  font-weight: 600;
+  /* transition: all .5s; */
+}
+.footer .footer_content .contacts_inner{
+  display: flex;
+  flex-direction: column;
+}
+
+.footer .footer_content .contacts_phone_wrapper, .contacts_gmail_wrapper, .contacts_location_wrapper{
+  display: flex;
+  flex-direction: row;
+}
+
+.footer .footer_content .contacts_phone_icon, .contacts_gmail_icon, .contacts_location_icon{
+  margin: 0 10px 0 0;
+}
+
+.footer .footer_content .contacts_phone_info, .contacts_gmail_info, .contacts_location_info{
+  padding: 8px 0;
+}
+
+.footer .footer_section.contacts .contacts_inner img{
+  width: 22px;
+  height: 22px;
+  margin: 5px;
+}
+
+.footer .footer_copyright_section{
+  margin-top: 1%;
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid white;
+  padding: 1% 18% 0.5% 13%;
+  justify-content: space-between;
+}
+
+.footer .footer_contacts_icon .contacts_social_wrapper{
+  display: flex;
+  flex-direction: row;
+}
+
+.footer .footer_contacts_icon .contacts_social_wrapper img{
+  width: 22px;
+  height: 22px;
+  margin: 5px;
+}
+
+/* Control css */
+/* search box UI border css */
+#searchUI{
+  background-color: #fff;
+  border: 10px solid #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  margin: 10px;
+  text-align: center;
+  background-image: url(/images/iconfinder-icon.svg);
+  background-size: cover;
+ 
+}
+/* #drop-down-box{
+  background-color: #fff;
+  position: relative;
+  display: inline-block;
+} */
+#searchText{
+  color:rgb(25, 25, 25);
+  font-family: Roboto, Arial, sans-serif;
+  padding: 2px 2px 2px 2px;
+  line-height: 38px;
+  padding-left: 5px;
+  padding-right: 5px;
+
+}
+
+/* CheckBox UI border CSS */
+#checkBoxUI{
+  background-color: #fff;
+  border: 10px solid #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  background-image: url(/images/tick.svg);
+  margin: 10px;
+  text-align: center;
+  float: right;
+}
+#checkBoxText{
+  color:rgb(25, 25, 25);
+  font-family: Roboto, Arial, sans-serif;
+  padding: 2px 2px 2px 2px;
+  line-height: 38px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+}
+
+/* copyright of a map */
+div.gm-style-cc{
+  visibility: hidden;
+}
+@media screen and (max-width: 1024px) {
+ .footer .footer_content .footer_section{
+   padding: 1%;
+   width: 192px;
+ }
+
+}
+
+span#demo{
+  width: 50px;
+}

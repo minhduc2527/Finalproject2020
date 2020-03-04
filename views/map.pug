@@ -1,0 +1,96 @@
+extends layout
+block content
+ main.content
+  .search_map_container
+    .search_map_content
+      .maps_inner
+        
+        #maps_bar_container.maps_bar_container
+          .maps_bar
+            #maps_bar_toggle.maps_bar_toggle
+              //- triangle bullet for toggle button
+              span#triangle_bullet &#9658;
+              //- #rotating_triangle_bullet
+            .maps_bar_content
+              .bar_list
+                .bar_content_item
+                  .maps_bar_header
+                    .maps_bar_search_wrapper
+                      .maps_bar_search_inner
+                        form.form_group
+                          input.maps_bar_search_input#search_location(type='text' placeholder='Search')
+                          .maps_bar_search_button
+                            .maps_bar_search_button_search
+                              button.search_button.get_map(type='submit')
+                                
+                              
+                  //- List of results
+                  .maps_bar_list
+                    .maps_bar_list_item
+                      .maps_bar_list_item_info
+                        .maps_bar_list_item_info_item.maps_bar_list_item_info_title
+                          span#info_title 
+                        .maps_bar_list_item_info_item.maps_bar_list_item_info_address
+                          #info_address 
+                          #info_population
+                          #info_area
+                          #info_density
+                          .image_suggestion#image_list
+                            #info_image_wrapper
+                              img(src="", alt="" id="info_image0")
+                              p#image_description0
+
+                            #info_image_wrapper
+                              img(src="", alt="" id="info_image1")
+                              p#image_description1
+
+                            #info_image_wrapper
+                              img(src="", alt="" id="info_image2")
+                              p#image_description2
+
+                            #info_image_wrapper
+                              img(src="", alt="" id="info_image3")
+                              p#image_description3
+                            
+
+        //- legend for coloring population
+        #maps_map_container.maps_map_container
+          #map.map
+          .legend_container
+            .legend_inner
+              #legend
+                .legend.legend_polygon_name_wrapper
+                  .legend_polygon_name_inner
+                    #PolygonName Name
+                .legend.legend_color_box_wrapper
+                  #color-box
+                    .color-key
+                      #ruler
+                        span#data-caret &#x25C6;
+                        .cm Value
+                        .cm Value
+                        .cm Value
+                        .cm Value
+                        .cm Value
+                        .cm Value
+                        .cm Value
+                        .cm Value
+
+      script.
+        document.getElementById('maps_bar_toggle').onclick = close
+        slider()
+          
+
+
+    //- legend
+    //- #legend
+    //-   #PolygonName Name
+    //-   #census-min Min Value
+    //-   .color-key
+    //-     span#data-caret &#x25C6;
+    //-   #census-max Max Value
+      //- div(class="population")
+      //-   p Population:
+      //-   input#population(type='text')
+    //- span(style="font-size:30px;cursor:pointer" onclick="openNav()") &#x2630; open
+         

@@ -1,0 +1,154 @@
+extends layout
+block content
+  main.main_content
+    article.homesite_article
+      article.homesite_article_inner
+        //- header of the page
+        .homesite_article_header
+          h1 Visualized Data Map Overview
+
+        //- introduction
+        .homesite_article_introduction_content
+          .homesite_article_introduction
+            .article_introduction_content_wrapper
+              p
+                | Welcome to the Interactive Map with Vietnamese Population Data, where data is not just a number. If you're familiar with our website, let's go and check out our map
+                a(href="/catalog/map")  here.
+              p
+                | If you're brand new to our website, let's jump to our Guide below!
+
+              
+          .homesite_article_introduction_img
+            .article_introduction_img_wrapper
+              .map_overview_image
+                img(src="/images/overview_map2.png", alt="")
+              .figure_note
+                span Fig1. Map overview
+
+        //- guides
+        .homesite_article_guides_content
+          .homesite_article_guides_header
+            h1 Map Guides
+            //- map layer level
+          .homesite_article_guides_layer_level
+            
+
+            .homesite_article_guides_instruction
+              .layer_level_header
+                h3 Layer of the Map
+              .layer_level_instruction
+                .layer_level_instruction_header
+                  span There are totally 3 layers of the Map: The Province, The Ward and The District
+            
+                .card_group
+                  .row
+                    .column
+                      .card
+                        .img_container
+                          img(src='../images/province_layer.png' alt='Avatar' style='width:100%')
+                        .container
+                          p The Province Layer 
+                            strong automatically displays 
+                            | whenever you visit this page
+                    .column
+                      .card
+                        .img_container
+                          img(src='../images/district_layer.png' alt='Avatar' style='width:100%')
+                        .container
+                          p The District Layer will display after you 
+                            strong double click 
+                            | to the area you want when you are in Province Level
+                    .column
+                      .card
+                        .img_container
+                          img(src='../images/ward_layer.png' alt='Avatar' style='width:100%')
+                        .container
+                          p The Ward Layer will display after you 
+                            strong double click 
+                            | to the area you want when you are in District Level
+            
+            
+            .control_button_instruction
+              .control_button_header
+                h3 Control of the Map
+              .control_button_instruction
+                .control_button_header
+                  span In 
+                    strong the Map page
+                    |, the map displayed contain elements that you may want to use to interact with the map. These elements are known as Control Button. 
+                    | Below is a list of controls you can use in our map:
+                .control_button_list
+                  //- map type control
+                  .control_button_item
+                    .control_button_img
+                      .control_img_wrapper  
+                        img(src="../images/map_type_control.png", alt="")  
+                    .control_button_description
+                      p The 
+                        strong 
+                          em Map Type control 
+                        | is available in a dropdown or horizontal button bar style, allowing you to choose a map type (
+                        code(dir="ltr") ROADMAP
+                        |,
+                        code(dir="ltr") SATELLITE
+                        |, 
+                        code(dir="ltr") HYBRID
+                        |, or 
+                        code(dir="ltr") TERRAIN
+                        |). This control appears by default in the top left corner of the map.
+                  //- option control button
+                  .control_button_item
+                    .control_button_img
+                      .control_img_wrapper
+                        img(src="../images/options_control.png", alt="")
+                    .control_button_description
+                      p The
+                        strong 
+                          em Options control 
+                        | allows you to choose to display or remove the different data layer. This control appears by default in the top right corner of the map.
+                  
+                  //- zoom control button
+                  .control_button_item
+                    .control_button_img
+                      .control_img_wrapper(style="padding-left: 35px")
+                        img(src="../images/zoom_control.png" alt="" style="margin-left: auto")
+                    .control_button_description
+                      p The 
+                        strong 
+                          em Zoom control  
+                        | displays "+" and "-" buttons that allows you to change the zoom level of the map. This control appears by default in the bottom right corner of the map.
+                  //- side menu control
+                  .control_button_item
+                    .control_button_img
+                      .control_img_wrapper#wrapper
+                        img(src="../images/side_menu_control.png" alt="" )
+                    .control_button_description
+                      p The 
+                        strong 
+                          em Side Menu control 
+                        | allows you to open the side menu. The side menu will help you search the location you want or display more infomation when you click to a location in the map. This control appears by default in the top left corner of the map.
+                  //- legend
+                  .control_button_item
+                    .control_button_img
+                      .control_img_wrapper#wrapper
+                        img(src="../images/legend_bar.png" alt="" width="150px")
+                    .control_button_description
+                      p The
+                        strong
+                          em Legend bar
+                        | allows you to observe the population of an area when you hover the mouse on it
+
+            .search_result_instruction
+              .search_result_header
+                h3 Search
+              .search_result_instruction
+                .search_result_instruction_header 
+                  span The 
+                    strong Side Menu button 
+                    | displays the result menu when you search your location. It also shows attractive famous location images of that area when you click.
+                .search_result_images
+                  .search_result_wrapper
+                    img(src="../images/search_result.png", alt="")
+                .search_result_images
+                  .search_result_wrapper
+                    img(src="../images/search_result2.png", alt="")

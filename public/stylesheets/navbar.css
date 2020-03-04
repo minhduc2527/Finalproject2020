@@ -1,0 +1,137 @@
+
+/* 
+=====
+EFFECT FADING OUT FOR SIBLINGS MENU OPTIONS 
+=====
+*/
+
+.menu:hover .menu__link:not(:hover){
+    color: white;
+  }
+  
+  /* 
+  =====
+  MENU STYLES
+  =====
+  */
+  
+  /* core styles */
+  .menu{
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-color: #0F9D58;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
+  }
+  
+  .menu__list{
+    display: flex;  
+    align-items: center;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;  
+    min-height: 48px;
+  }
+  
+  .menu__group{
+    height: 48px;
+    flex-grow: 1;
+    position: relative;
+  }
+  
+  .menu__link{
+    display: block;
+  }
+  a.menu__link{
+    font: 500 14px/20px Google Sans, Noto Sans, Noto Sans JP, Noto Sans KR , Noto Naskh Arabic, Noto Sans Thai, Noto Sans Hebrew, Noto Sans Bengali, sans-serif;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    text-transform: none;
+    text-align: center;
+    padding: 15px 0;
+  }
+  
+  /* skin */
+  
+ 
+  .menu__link{
+
+    height: 48px;
+  }
+
+ 
+ 
+  
+  /* states */
+  .menu__link:focus{
+    outline: 2px solid #fff;
+  }
+  
+  /* hover animation */
+ .menu__group a.menu__link:hover{
+   text-decoration: none;
+   color: #0F9D58;
+   z-index: 1;
+ }
+ 
+  .menu__link{
+    position: relative;
+    overflow: hidden;
+  
+    will-change: color;
+    transition: color .25s ease-out;  
+  }
+  
+  .menu__link::before, 
+  .menu__link::after{
+    content: "";
+    width: 0;
+    height: 48px;
+    background-color: #fff;
+    will-change: width;
+    transition: width .1s ease-out;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+  }
+  
+  .menu__link::before{
+    left: 50%;
+    transform: translateX(-50%); 
+  }
+  
+  .menu__link::after{
+    right: 50%;
+    transform: translateX(50%); 
+  }
+  
+  .menu__link:hover::before, 
+  .menu__link:hover::after{
+    width: 100%;
+    transition-duration: .2s;
+  }
+  
+  /*
+  =====
+  DEMO
+  =====
+  */
+  
+  @media (min-width: 768px){
+  
+    html{
+      font-size: 62.5%;
+    }
+  }
+  
+  @media (max-width: 767px){
+  
+    html{
+      font-size: 50%;
+    }
+  }
+
+  

@@ -1,0 +1,76 @@
+extends layout
+block content
+  main.main_content_about
+    article.aboutsite_article
+      article.aboutsite_article_inner
+        //- header of the page
+        .aboutsite_article_header
+          h2 About project
+
+        //- introduction
+        .aboutsite_article_introduction_content
+          .aboutsite_article_introduction
+            p The overall objective of the project is to provide a more intuitive alternative to traditional Vietnamese statistical representation, which can serve many other purposes and projects such as research and learning and especially education.
+            P
+        
+        h2 Meet the Team
+     
+      
+        .card_group
+          .row
+            .column
+              .card
+                img(src='../images/abc.jpg' alt='Jane' style='width:100%')
+                .container
+                  h2 Quoc Khanh
+                  p.title Developer 
+                  p Third year ICT student.
+                  p khanhtq.b8084@st.usth.edu.vn
+                  p
+                    button.button(onclick="window.location.href = 'https://www.facebook.com/JackieTruong123'") Contact
+                      
+            .column
+              .card
+                img(src='../images/def.jpg' alt='Mike' style='width:100%')
+                .container
+                  h2 Minh Ngoc
+                  p.title Developer
+                  p Third year ICT student.
+                  p ngocdtm.b8129@st.usth.edu.vn
+                  p
+                    button.button(onclick="window.location.href = 'https://www.facebook.com/ngocdo4299'") Contact
+              
+          .row
+            .column
+              .card
+                img(src='../images/ghi.jpg' alt='John' style='width:100%')
+                .container
+                  h2 Dang Duong
+                  p.title Data analysist
+                  p Some text that describes me .
+                  p example@example.com
+                  p
+                    button.button(onclick="window.location.href = 'https://www.facebook.com/duong.nguyendang.18'") Contact
+            .column
+              .card
+                img(src='../images/jkl.jpg' alt='John' style='width:100%')
+                .container
+                  h2 Minh Duc
+                  p.title Data analysist
+                  p Some text that describes me.
+                  p example@example.com
+                  p
+                    button.button(onclick="window.location.href = 'https://www.facebook.com/dang.duc.969'") Contact
+        
+        .aboutsite_article_ref_doc
+          .aboutsite_article_ref_doc_header
+            h2 References and Documents
+            ul
+              li
+                a(href="https://developers.google.com/maps/documentation/javascript/tutorial") Google Map Javascript API
+              li
+                a(href="https://cloud.google.com/compute/docs") Google Cloud storage
+              li
+                a(href="https://developers.google.com/maps/documentation/geocoding/start") Geocoding API
+              li
+                a(href="https://www.wikipedia.org/") Basic definitions and terms

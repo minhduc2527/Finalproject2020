@@ -1,0 +1,26 @@
+{
+  "name": "group-project",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "devstart": "nodemon ./bin/www",
+    "sass:compile": "node-sass --finalProject2020 sass navbar.scss navbar.css"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jquery": "^3.4.1",
+    "morgan": "~1.9.1",
+    "node-sass": "^4.13.0",
+    "node-sass-middleware": "^0.11.0",
+    "pug": "^2.0.4",
+    "sass": "^1.23.3"
+  },
+  "devDependencies": {
+    "coffeescript": "^2.4.1"
+  }
+}
